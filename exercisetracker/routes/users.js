@@ -3,7 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 // Load User model
-const User = require('../models/User');
+const User = require('../models/user');
 const { forwardAuthenticated } = require('../config/auth');
 
 // Login Page
@@ -14,15 +14,11 @@ router.get('/register', forwardAuthenticated, (req, res) => res.render('register
 
 // Register
 router.post('/register', (req, res) => {
-  const { name, email, password, password2 } = req.body;
+  const { username, password } = req.body;
   let errors = [];
 
-  if (!name || !email || !password || !password2) {
+  if (!username || !password) {
     errors.push({ msg: 'Please enter all fields' });
-  }
-
-  if (password != password2) {
-    errors.push({ msg: 'Passwords do not match' });
   }
 
   if (password.length < 6) {
@@ -32,27 +28,22 @@ router.post('/register', (req, res) => {
   if (errors.length > 0) {
     res.render('register', {
       errors,
-      name,
-      email,
-      password,
-      password2
+      username,
+      password
     });
   } else {
-    User.findOne({ email: email }).then(user => {
+    User.findOne({ username: username }).then(user => {
       if (user) {
-        errors.push({ msg: 'Email already exists' });
+        errors.push({ msg: 'Username already exists' });
         res.render('register', {
-          errors,
-          name,
-          email,
-          password,
-          password2
+            errors,
+            username,
+            password
         });
       } else {
         const newUser = new User({
-          name,
-          email,
-          password
+            username,
+            password
         });
 
         bcrypt.genSalt(10, (err, salt) => {
