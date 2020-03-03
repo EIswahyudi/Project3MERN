@@ -6,6 +6,7 @@ import Tracker from "./pages/Tracker";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import New from "./pages/New";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Wrapper>
           <Route exact path="/" component={Tracker} />
           <Route exact path="/tracker" component={Tracker} />
-          {/* <Route exact path="/dashboard" component={Dashboard} /> */}
+          <Route exact path="/exercise?" component={New} />
           {/* <Route exact path="/userlogin" component={Userlogin} /> */}
         </Wrapper>
         <Footer />
