@@ -4,11 +4,13 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Tracker from "./pages/Tracker";
 // import Userlogin from "./pages/Userlogin";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import NewExercise from "./pages/New";
 import CreateAccount from "./pages/CreateAccount";
 import LoginForm from "./pages/LoginForm";
+//react bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
           <Route exact path="/userlogin" component={LoginForm} />
           <Route exact path="/createaccount" component={CreateAccount} />
         </Wrapper>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
