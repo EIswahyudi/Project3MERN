@@ -7,7 +7,7 @@ import Col from "../components/Col";
 function About() {
   return (
     <div>
-      <Hero backgroundImage="https://static.vecteezy.com/system/resources/previews/000/139/756/large_2x/heart-rate-running-free-vector.jpg">
+      <Hero backgroundImage="https://www.bcee.lu/fileadmin/_processed_/f/5/csm_Garmin_Fitbit_Cover_a6b7dd078d.jpg">
       </Hero>
       
           <div class="ui container workout">
@@ -17,8 +17,8 @@ function About() {
                   <div>
                     <div class="workout-stats"></div>
                     <div class="buttons">
-                      <a href="/exercise?" class="huge ui yellow button">Continue Workout</a>
-                      <a href="/exercise?" class="huge negative ui button">New Workout</a>
+                      <a href="/exercise?" class="huge ui purple button">Continue Workout</a>
+                      <a href="/exercise?" class="huge yellow ui button">New Workout</a>
                     </div>
                   </div>
                 </div>
