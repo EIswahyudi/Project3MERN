@@ -7,7 +7,7 @@ import Col from "../components/Col";
 function LoginForm() {
     return (
         <div>
-            <Hero backgroundImage="https://static.vecteezy.com/system/resources/previews/000/139/756/large_2x/heart-rate-running-free-vector.jpg">
+            <Hero backgroundImage="https://www.bcee.lu/fileadmin/_processed_/f/5/csm_Garmin_Fitbit_Cover_a6b7dd078d.jpg">
             </Hero>
             <div class="ui container exercise">
                 <div class="ui raised card m-auto">
