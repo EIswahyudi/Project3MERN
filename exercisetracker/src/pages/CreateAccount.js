@@ -11,7 +11,7 @@ function CreateAccount() {
             </Hero>
             <div class="ui container exercise">
                 <div class="ui raised card m-auto">
-                    <h2>Create</h2>
+                    <h2>Create Account</h2>
                     <form action="POST">
                         <div class="login-form d-none">
                            {/* FORM */}
