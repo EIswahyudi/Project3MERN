@@ -9,6 +9,7 @@ import Wrapper from "./components/Wrapper";
 import NewExercise from "./pages/New";
 import CreateAccount from "./pages/CreateAccount";
 import LoginForm from "./pages/LoginForm";
+import Dashboard from "./pages/Dashboard";
 //react bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,8 +24,8 @@ function App() {
           <Route exact path="/exercise" component={NewExercise} />
           <Route exact path="/userlogin" component={LoginForm} />
           <Route exact path="/createaccount" component={CreateAccount} />
+          <Route exact path="/dashboard" component={Dashboard} />
         </Wrapper>
-        {/* <Footer /> */}
       </div>
     </Router>
   );

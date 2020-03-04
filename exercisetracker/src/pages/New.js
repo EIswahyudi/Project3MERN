@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
@@ -97,6 +97,8 @@ function NewExercise() {
               </button>
                         </div>
                     </form>
+                    <script src="../public/api.js"></script>
+                    <script src="../public/index.js"></script>
                 </div>
             </div>
         </div>
