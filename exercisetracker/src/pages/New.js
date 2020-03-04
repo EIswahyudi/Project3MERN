@@ -4,7 +4,7 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 
-function Exercise() {
+function NewExercise() {
     return (
         <div>
             <Hero backgroundImage="https://www.bcee.lu/fileadmin/_processed_/f/5/csm_Garmin_Fitbit_Cover_a6b7dd078d.jpg">
@@ -19,6 +19,7 @@ function Exercise() {
                                 <option disabled selected>Select Exercise Type</option>
                                 <option value="resistance">Resistance</option>
                                 <option value="cardio">Cardio</option>
+                                <option value="steps">Steps</option>
                             </select>
                         </div>
                         <div class="cardio-form d-none">
@@ -101,4 +102,4 @@ function Exercise() {
         </div>
     )
 }
-export default Exercise;
+export default NewExercise;
