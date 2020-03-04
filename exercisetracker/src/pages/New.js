@@ -4,7 +4,7 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 
-function Exercise() {
+function NewExercise() {
     return (
         <div>
             <Hero backgroundImage="https://static.vecteezy.com/system/resources/previews/000/139/756/large_2x/heart-rate-running-free-vector.jpg">
@@ -101,4 +101,4 @@ function Exercise() {
         </div>
     )
 }
-export default Exercise;
+export default NewExercise;

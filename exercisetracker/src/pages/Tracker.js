@@ -17,8 +17,8 @@ function About() {
                   <div>
                     <div class="workout-stats"></div>
                     <div class="buttons">
-                      <a href="/exercise?" class="huge ui yellow button">Continue Workout</a>
-                      <a href="/exercise?" class="huge negative ui button">New Workout</a>
+                      <a href="/exercise?" class="huge ui purple button">Continue Workout</a>
+                      <a href="/exercise?" class="huge yellow ui button">New Workout</a>
                     </div>
                   </div>
                 </div>

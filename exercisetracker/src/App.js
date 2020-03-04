@@ -6,7 +6,7 @@ import Tracker from "./pages/Tracker";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
-import New from "./pages/New";
+import NewExercise from "./pages/New";
 import CreateAccount from "./pages/CreateAccount";
 import LoginForm from "./pages/LoginForm";
 
@@ -18,7 +18,7 @@ function App() {
         <Wrapper>
           <Route exact path="/" component={Tracker} />
           <Route exact path="/tracker" component={Tracker} />
-          <Route exact path="/exercise?" component={New} />
+          <Route exact path="/exercise" component={NewExercise} />
           <Route exact path="/userlogin" component={LoginForm} />
           <Route exact path="/createaccount" component={CreateAccount} />
         </Wrapper>
