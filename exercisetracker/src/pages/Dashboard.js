@@ -8,6 +8,7 @@ function Dashboard() {
     return (
 <div class="container mt">
       <h1 class="text-center">Workout Dashboard</h1>
+      {/* <h2 class="text-center">Welcome {user.username}!</h2> */}
       <div class="row mt">
         <div class="col-md-6">
           <canvas id="canvas"></canvas>

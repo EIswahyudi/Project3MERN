@@ -9,9 +9,16 @@ function CreateAccount() {
     const [users, setUsers] = useState([])
     const [formObject, setFormObject] = useState({})
 
+    function loadUserProfile() {
+        // load user's dashboard
+        API.getUser()
+            .then(res.redirect("/dashboard"))
+            .catch(err => console.log(err));
+    }
+
     function handleInputChange(event) {
         const { name, value } = event.target;
-        setFormObject({...formObject, [name]: value})
+        setFormObject({ ...formObject, [name]: value })
     };
 
     function handleFormSubmit(event) {
@@ -21,7 +28,8 @@ function CreateAccount() {
                 username: formObject.username,
                 password: formObject.password
             })
-            .then(console.log(formObject.username, formObject.password));
+                .then(res => loadUserProfile())
+                .catch(err => console.log(err));
         }
     };
 
@@ -33,22 +41,22 @@ function CreateAccount() {
                 <div class="ui raised card m-auto">
                     <h2>Create Account</h2>
                     <form>
-              <Input
-              onChange={handleInputChange}
-                name="username"
-                placeholder="Username"
-              />
-              <Input
-              onChange={handleInputChange}
-                name="password"
-                placeholder="Password"
-              />
-              <FormBtn
-                onClick={handleFormSubmit}
-              >
-                Submit Book
+                        <Input
+                            onChange={handleInputChange}
+                            name="username"
+                            placeholder="Username"
+                        />
+                        <Input
+                            onChange={handleInputChange}
+                            name="password"
+                            placeholder="Password"
+                        />
+                        <FormBtn
+                            onClick={handleFormSubmit}
+                        >
+                            Submit Book
               </FormBtn>
-            </form>
+                    </form>
                 </div>
             </div>
         </div>
