@@ -9,6 +9,8 @@ import Wrapper from "./components/Wrapper";
 import New from "./pages/New";
 import CreateAccount from "./pages/CreateAccount";
 import LoginForm from "./pages/LoginForm";
+//react bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
