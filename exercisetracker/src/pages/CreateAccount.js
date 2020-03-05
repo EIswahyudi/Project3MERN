@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Hero from "../components/Hero";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+import Dashboard from "./Dashboard";
 import { Input, FormBtn } from "../components/CreateUserForm";
 
 function CreateAccount() {
 
-    const [users, setUsers] = useState([])
+    const [username, password] = useState([])
     const [formObject, setFormObject] = useState({})
 
     function loadUserProfile() {
         // load user's dashboard
         API.getUser()
-            .then(res.redirect("/dashboard"))
+            .then(
+                // this.setState({ username: formObject.username, password: formObject.password });
+                // console.log(state.username, state.password)
+            )
             .catch(err => console.log(err));
     }
 
@@ -28,6 +31,7 @@ function CreateAccount() {
                 username: formObject.username,
                 password: formObject.password
             })
+                // .then(this.setState({ username: formObject.username, password: formObject.password }))
                 .then(res => loadUserProfile())
                 .catch(err => console.log(err));
         }
@@ -54,7 +58,7 @@ function CreateAccount() {
                         <FormBtn
                             onClick={handleFormSubmit}
                         >
-                            Submit Book
+                            Submit
               </FormBtn>
                     </form>
                 </div>
